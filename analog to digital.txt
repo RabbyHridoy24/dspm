@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+#define pi acos(-1.0)
+using namespace std;
+
+int main()
+{
+     int t;
+     double con[100],dis[100];
+       //continues signal to discrete signal
+      //5sin(PI*t) for 0<=t<3 and time interval t = 0.1 (book page iss 7 example 2.1)
+
+     cin>>t;
+     int j = 0;
+     for(double i=0; i<=t; i=i+0.2,j++)
+     {
+          con[j]=5*sin(pi*i);
+          printf("%.3lf \n",con[j]);
+     }
+
+     j = 0;
+     for(double i=0; i<=t; i=i+0.2,j++)
+     {
+          dis[j]=5*sin(pi*j*0.1);
+          printf("%.3lf  %d\n",dis[j],j);
+     }
+
+
+
+
+    return 0;
+}
